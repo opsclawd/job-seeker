@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "blocked": false,
-  "blockedReason": null,
+  "blocked": true,
+  "blockedReason": "Cloudflare verification / security challenge encountered on Indeed (Additional Verification Required). Ray ID: 9c73dd002b9801de. URL: https://ca.indeed.com/jobs?q=node+developer&l=Calgary%2C+AB&fromage=30&sort=date&start=40",
   "perQuery": {
     "https://ca.indeed.com/jobs?q=node+developer&l=Calgary%2C+AB&fromage=30&sort=date": {
       "start": 40,
