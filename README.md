@@ -1,2 +1,4 @@
-# job-seeker
-Job search automation: tracker + dashboard + cron runbooks.
+# Job Seeker
+
+Automate job search intake + applications (Indeed first).
+

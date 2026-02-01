@@ -1,0 +1,7 @@
+{
+  "name": "indeed-triage (TODO)",
+  "schedule": { "kind": "cron", "expr": "0 9,13,17 * * *", "tz": "America/Edmonton" },
+  "payload": { "kind": "systemEvent", "text": "TODO: run Indeed triage" },
+  "sessionTarget": "main",
+  "enabled": false
+}
