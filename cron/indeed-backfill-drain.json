@@ -1,0 +1,13 @@
+{
+  "name": "indeed-backfill-drain",
+  "schedule": { "kind": "cron", "expr": "*/15 * * * *", "tz": "America/Edmonton" },
+  "payload": {
+    "kind": "agentTurn",
+    "timeoutSeconds": 3300,
+    "deliver": true,
+    "bestEffortDeliver": true,
+    "message": "INDEED BACKFILL DRAIN (15m): Continue backfilling the last-30-days backlog in small bites until done.\n\nRepo: ~/projects/job-seeker\nFiles:\n- Queries: streams/indeed/QUERIES.md\n- Tracker: data/tracker.csv\n- State: data/backfill-state.json\n\nRules:\n- Browser-only (no web_fetch). Use OpenClaw browser profile.\n- Cap: **max 30 new jobs per run**.\n- If any verification/CAPTCHA/Turnstile appears: set state.blocked=true, state.blockedReason, commit+push state, DISABLE this cron job, and alert Gary in Telegram with what happened.\n- De-dupe by jk (id).\n- Status rules: apply/new/maybe/skip (manager roles=maybe; Salesforce-only=skip; DevOps-heavy=skip; SAP-only=skip; unrelated=skip).\n\nAlgorithm:\n1) Load QUERIES.md URLs.\n2) Load tracker.csv existing ids.\n3) Load state.json (v2). If blocked=true, exit after alerting.\n4) For each query URL, ensure state.perQuery[url] exists: {start:0, consecutiveNoNewPages:0, done:false}.\n5) For each query not done:\n   - Process pages starting at `start`, up to 10 pages this run, but stop early if we hit the 30-new-jobs cap.\n   - For each page, open query URL with `&start=<start>` (10 increments).\n   - Enumerate job cards; open each new job view page (viewjob?jk=...). Extract jk. If new, summarize JD into notes and append row.\n   - Track how many new jk were added on this page. If 0, increment consecutiveNoNewPages, else reset to 0.\n   - Advance start by 10 each page.\n   - If consecutiveNoNewPages >= 3, mark done=true for that query.\n6) Save state.json updates.\n7) If tracker or state changed, commit+push.\n8) If all queries done=true, DISABLE this cron job and notify Gary that backfill is complete.\n9) Otherwise, send a short summary: new rows added by status + next start offsets + remaining queries not done.\n"
+  },
+  "sessionTarget": "isolated",
+  "enabled": true
+}

@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "perQuery": {
-    "https://ca.indeed.com/jobs?q=node+developer&l=Calgary%2C+AB&fromage=30&sort=date": 20
-  }
+  "version": 2,
+  "blocked": false,
+  "blockedReason": null,
+  "perQuery": {}
 }
