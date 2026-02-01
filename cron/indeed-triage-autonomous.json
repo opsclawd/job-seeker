@@ -1,0 +1,10 @@
+{
+  "name": "indeed-triage-autonomous",
+  "schedule": { "kind": "cron", "expr": "0 * * * *", "tz": "America/Edmonton" },
+  "payload": {
+    "kind": "agentTurn",
+    "message": "You are running an autonomous Indeed triage. Use the OpenClaw browser profile.\n\nGoal: find NEW job listings (not already in tracker) matching Gary's targets (React/frontend, Node/full-stack, architect; Calgary-only for now). Manager roles allowed and should be marked maybe. Auto-skip Salesforce-only roles, DevOps-heavy roles, SAP-only roles, and clearly unrelated roles.\n\nData files (repo):\n- Queries: ~/projects/job-seeker/streams/indeed/QUERIES.md\n- Tracker: ~/projects/job-seeker/data/tracker.csv\n\nProcess:\n1) Read QUERIES.md and extract all Indeed query URLs.\n2) Load tracker.csv and build a set of existing ids (jk).\n3) For each query URL: open in browser, iterate result pages (max 5 pages per query per run to keep runtime bounded).\n4) For each listing card on the page: open the job description page (viewjob?jk=...). Extract jk.\n   - If jk already exists, skip.\n   - Otherwise read the job description and write a concise JD-based summary (2-5 bullets) into notes, including: role focus (frontend/backend/full-stack), key tech mentioned, and application type (Easy Apply vs company site).\n   - Set status:\n     - apply: strong match to targets\n     - new: possibly relevant, needs manual review\n     - maybe: manager/leadership track or borderline\n     - skip: excluded categories\n   - Append a row to tracker.csv.\n5) After processing all queries, if any new rows were added:\n   - Commit and push to https://github.com/opsclawd/job-seeker (main branch).\n6) Send a summary message to Gary in Telegram (this chat): counts added by status + list of apply links + list of maybe links.\n\nConstraints:\n- Do not use web_fetch for Indeed (Cloudflare); browser-only.\n- Do not apply to jobs in this triage run; only collect + summarize + update tracker.\n- If any site prompts for additional verification/CAPTCHA, stop and report what happened in the Telegram summary.\n"
+  },
+  "sessionTarget": "isolated",
+  "enabled": true
+}
