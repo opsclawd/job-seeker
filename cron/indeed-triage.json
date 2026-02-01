@@ -1,7 +1,10 @@
 {
-  "name": "indeed-triage (TODO)",
-  "schedule": { "kind": "cron", "expr": "0 9,13,17 * * *", "tz": "America/Edmonton" },
-  "payload": { "kind": "systemEvent", "text": "TODO: run Indeed triage" },
+  "name": "indeed-triage",
+  "schedule": { "kind": "cron", "expr": "0 */4 * * *", "tz": "America/Edmonton" },
+  "payload": {
+    "kind": "systemEvent",
+    "text": "Reminder: run Indeed triage (every 4h). Use OpenClaw browser profile. Visit each Indeed query URL listed in ~/projects/job-seeker/streams/indeed/QUERIES.md (Calgary, last 30 days, sort by date). For each listing: open the job page (viewjob?jk=...), de-dupe by jk against ~/projects/job-seeker/data/tracker.csv, read the job description, write a short JD-based summary into the tracker notes, and set status apply/new/maybe/skip (manager roles=maybe; Salesforce-only=skip; DevOps-heavy=skip; unrelated=skip). Append new rows and commit+push changes to opsclawd/job-seeker. Finally, send Gary a short summary: counts added by status + top apply links."
+  },
   "sessionTarget": "main",
-  "enabled": false
+  "enabled": true
 }
