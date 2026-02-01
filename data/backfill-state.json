@@ -4,8 +4,8 @@
   "blockedReason": null,
   "perQuery": {
     "https://ca.indeed.com/jobs?q=node+developer&l=Calgary%2C+AB&fromage=30&sort=date": {
-      "start": 20,
-      "consecutiveNoNewPages": 0,
+      "start": 40,
+      "consecutiveNoNewPages": 1,
       "done": false
     },
     "https://ca.indeed.com/jobs?q=full+stack+developer&l=Calgary%2C+AB&fromage=30&sort=date": {
