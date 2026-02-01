@@ -18,3 +18,34 @@ c60a38d64742f284,indeed,software engineer,software engineer,Trufla Technology,"C
 fd8e30b02a9857da,indeed,node developer,Senior Java Developer,Bounteous,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=fd8e30b02a9857da,skip,,Java web services/APIs for mobile services platform; not a React/Node target role.,2026-02-01T11:23:59-07:00,,
 f1ba54779070e0de,indeed,full stack developer,Jr. Software Developer,PBS Systems,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=f1ba54779070e0de,skip,,Entry-level .NET (VB/C#) in-office; mismatch for senior React/Node track.,2026-02-01T11:23:59-07:00,,
 4616156946fa4e33,indeed,node developer,EVCN Cloud Architecte,Ericsson,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=4616156946fa4e33,skip,,"Cloud architect / DevOps lead (Azure, GitLab CI/CD, DevOps transformation, on-site Montreal note) → auto-skip (DevOps-heavy/unrelated).",2026-02-01T11:23:59-07:00,,
+5e31c67d05ada3f0,indeed,node developer,Industry X MAS Mobile Developer,Accenture,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=5e31c67d05ada3f0,skip,,"- IBM Maximo Application Suite (MAS) Mobile dev (EAM/field work mgmt)
+- Maximo MIF integrations, automation scripts, REST
+- Not a React/Node role → auto-skip",2026-02-01T11:41:45-07:00,,
+34534044b3e75adf,indeed,node developer,"Software Engineering Developer, DevOps",General Dynamics Mission Systems - Canada,"1120 68th Avenue NE, Calgary, AB T2E 8S5",,https://ca.indeed.com/viewjob?jk=34534044b3e75adf,skip,,"- DevOps Engineer: CI/CD (GitLab/Jenkins), IaC (Terraform/Ansible), Docker/K8s
+- Multi-cloud (AWS/Azure/GCP), observability (Prometheus/Grafana), security hardening
+- DevOps-heavy → auto-skip",2026-02-01T11:41:45-07:00,,
+9c3285483f92b2ce,indeed,node developer,M365 + Power Platform + Copilot Developer,F12.net,"Calgary, AB T2E 4P9",,https://ca.indeed.com/viewjob?jk=9c3285483f92b2ce,skip,,"- Microsoft M365 + Power Platform (Power Apps/Automate/Dataverse) + Copilot Studio agents
+- SharePoint/Teams deployments, ALM pipelines, connectors/integrations
+- Not a React/Node role → auto-skip",2026-02-01T11:41:45-07:00,,
+0b6724f96237f30f,indeed,node developer,Immigration back end officer,Walshken Immigration,"Calgary, AB T2A 6K4",,https://ca.indeed.com/viewjob?jk=0b6724f96237f30f,skip,,"- Unrelated admin/immigration role (page ad)
+- Auto-skip: not software engineering",2026-02-01T11:41:45-07:00,,
+d8ceb23954da91cd,indeed,node developer,Software Developer - Intermediate,Bold Commerce,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=d8ceb23954da91cd,apply,,"- Build/maintain Shopify app suite; AI-enabled dev workflow with strong architecture patterns
+- Tech: PHP (Laravel), Go, JS/TS, React; REST/GraphQL; Shopify Admin/Storefront APIs
+- Remote (Canada/US); apply via Indeed “Apply now”",2026-02-01T11:41:45-07:00,,
+c7bc59e0ab45b0b8,indeed,node developer,Principal/Staff Software Developer,Neo Financial,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=c7bc59e0ab45b0b8,apply,,"- Staff full-stack; lead architecture/standards + mentor; microservices
+- Stack: TypeScript, Node.js, GraphQL, MongoDB, AWS (serverless); AI tooling (Copilot/Cursor)
+- Calgary office/relocation; apply via Indeed",2026-02-01T11:41:45-07:00,,
+611f5c53cbc16252,indeed,node developer,Backend Engineer,Kindr.ca,"407 9th Avenue SE, Calgary, AB",,https://ca.indeed.com/viewjob?jk=611f5c53cbc16252,new,,"- Dental-tech startup automating insurance/reception workflows; heavy integrations + data pipelines
+- Stack: Python, Azure, SQL + LLM/TTS/STT; some leadership (mentor 1–2 devs)
+- Hybrid Calgary; salary $100–140k; apply via Indeed",2026-02-01T11:41:45-07:00,,
+5739e0743693689b,indeed,node developer,Senior Front End Web Developer,Trinity Consultants Canada,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=5739e0743693689b,apply,,"- React/Next.js/TypeScript front-end; build internal client UIs with rapid iteration
+- 10+ yrs web dev; hybrid in a Canadian office
+- Apply via Indeed",2026-02-01T11:41:45-07:00,,
+716aa79640ecb14a,indeed,node developer,Full Stack Web Developer,Fresh Tracks Canada,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=716aa79640ecb14a,maybe,,"- Customer-facing travel sites; React/Next.js/TypeScript + headless CMS (DatoCMS), GraphQL, JAMstack
+- SEO/accessibility focus; maintain some legacy PHP
+- Hybrid (Calgary/Vancouver); salary $60–70k (likely low for senior) → maybe",2026-02-01T11:41:45-07:00,,
+37be32b21f3f2a94,indeed,node developer,Full Stack Software Developer,ATB Financial,"Calgary, AB",,https://ca.indeed.com/viewjob?jk=37be32b21f3f2a94,new,,"- Retail banking web app (300k+ clients); React + Express.js/TypeScript; REST APIs (Node or Spring Boot)
+- Mentions Docker/Kubernetes + CI/CD; on-call rotation
+- Hybrid (1 day onsite / 2 weeks); apply via Indeed",2026-02-01T11:41:45-07:00,,
+e23adf9f92a42890,indeed,node developer,Backend Platform Engineer,MingXuan Core Platforms,"833 10 Ave SW, Calgary, AB T2R 0B4",,https://ca.indeed.com/viewjob?jk=e23adf9f92a42890,skip,,"- Generic “back end developer” laundry-list (C#/Java/Python/PHP + React/Angular + K8s)
+- In-person; unclear product/team; likely low-signal post → skip",2026-02-01T11:41:45-07:00,,
