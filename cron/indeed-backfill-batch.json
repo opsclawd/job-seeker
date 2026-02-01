@@ -1,0 +1,13 @@
+{
+  "name": "indeed-backfill-batch (manual)",
+  "schedule": { "kind": "at", "atMs": 0 },
+  "payload": {
+    "kind": "agentTurn",
+    "message": "MANUAL BACKFILL BATCH: process 10 pages per query. See runbooks/BACKFILL_RUNBOOK.md for full instructions.",
+    "timeoutSeconds": 3300,
+    "deliver": true,
+    "bestEffortDeliver": true
+  },
+  "sessionTarget": "isolated",
+  "enabled": false
+}
