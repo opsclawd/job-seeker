@@ -1,0 +1,20 @@
+{
+  "name": "morning-apply",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 7 * * *",
+    "tz": "America/Edmonton"
+  },
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Morning Apply Run: Use the OpenClaw browser profile and the tracker at ~/projects/job-seeker/data/tracker.csv to work every row that currently has status=apply and no applied_at timestamp. For each of those jobs in chronological order, open the job URL (Usually an Indeed viewjob page or the employer careers site), follow the application flow, and look specifically for pre-screening questions. Answer each question clearly using the clean resume you uploaded (indeed-clean-resume.pdf: Senior Full-Stack Engineer, 14+ years, React/Next.js/Vue front ends, Node/TypeScript services, solid DevOps/CI/CD, Calgary/remote availability) and mention that resume file when describing your strengths. Record each question+answer pair in the tracker notes or add a short bullet summarizing what you answered so the human operator can see it later.\n\nIf a question requires a yes/no or short text answer, answer it directly but stay honest and tie it back to the resume (e.g., \"Yes, I have built React/TypeScript products for regulated SaaS\" or \"I can work from Calgary or remotely, as detailed in the resume\"). If the flow asks for a resume upload, use /home/gary/.openclaw/workspace/indeed-clean-resume.pdf. When the application is submitted or ready for submission, set applied_at to the current timestamp.\n\nIf you hit CAPTCHAs, 2FA, company logins, or any step that cannot be completed autonomously, stop there, note the blocker in tracker notes, and report it in the final summary so Gary can finish it manually.\n\nAfter you finish reviewing all apply rows, send Gary a Telegram summary in this chat: how many apply jobs you processed, which ones completed (include links), which ones still need manual follow-up, and a brief recap of the pre-screen answers you captured. Mention any blockers or required human actions explicitly. No web_fetch\u2014use the browser repeatedly to keep everything inside the OpenClaw profile.",
+    "model": "openai-codex/gpt-5.1-codex-mini",
+    "thinking": "off"
+  },
+  "isolation": {
+    "postToMainPrefix": "Cron",
+    "postToMainMode": "summary"
+  },
+  "sessionTarget": "isolated",
+  "enabled": true
+}
