@@ -9,9 +9,12 @@ We track cron *definitions* in git, and apply them to the running OpenClaw gatew
 
 ## Install/update
 
-1) Edit the JSON job definitions in `cron/`.
-2) Apply them to the gateway.
+1. Edit the JSON job definitions in `cron/` (and update the recorded browser snapshot/actions if the UI changed).
+2. Push the branch, open a PR against `main`, and once it merges make sure the running system cron is aligned with the merged definitions.
+3. After merging, run `cron.list` to find the job IDs and use `cron.update` (or `cron.add` if the job is new) so the gateway uses the latest payloads.
+4. Confirm `cron.list` again and, if the job logs snapshot refs, re-capture a fresh snapshot whenever the page layout shifts (so the automation does not rely on stale refs such as `e12`).
 
-Notes:
+## Notes
+
 - Indeed blocks scraping; this is browser-driven automation.
 - Never commit secrets.
