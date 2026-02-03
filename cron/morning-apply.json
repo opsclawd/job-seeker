@@ -13,7 +13,7 @@
   },
   "isolation": {
     "postToMainPrefix": "Cron",
-    "postToMainMode": "errors"
+    "postToMainMode": "summary"
   },
   "sessionTarget": "isolated",
   "enabled": true
