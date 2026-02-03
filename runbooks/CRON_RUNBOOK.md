@@ -15,3 +15,5 @@ We track cron *definitions* in git, and apply them to the running OpenClaw gatew
 Notes:
 - Indeed blocks scraping; this is browser-driven automation.
 - Never commit secrets.
+
+*Footnote: After cron updates merge to `main`, run `cron.list` to obtain the job IDs and `cron.update` (or `cron.add` for new entries) so the live gateway matches the repo definitions. Repeat `cron.list` afterward to verify the gateway state.*
