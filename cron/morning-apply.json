@@ -2,7 +2,7 @@
   "name": "morning-apply",
   "schedule": {
     "kind": "cron",
-    "expr": "0 0,4,8,12,16,20 * * *",
+    "expr": "30 0,4,8,12,16,20 * * *",
     "tz": "America/Edmonton"
   },
   "payload": {
