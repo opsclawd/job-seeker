@@ -7,7 +7,9 @@
   },
   "payload": {
     "kind": "agentTurn",
-    "message": "Daily Job Triage Run: Check for new listings matching queries in ~/projects/job-seeker/streams/indeed/QUERIES.md for the last 24 hours. Use the OpenClaw browser profile to visit each query URL, open each job page (viewjob?jk=...), de-dupe by jk against ~/projects/job-seeker/data/tracker.csv, read the job description, write a short JD-based summary into the tracker notes, and set status apply/new/maybe/skip (manager roles=maybe; Salesforce-only=skip; DevOps-heavy=skip; unrelated=skip). Append new rows and commit+push changes to opsclawd/job-seeker. Send Gary a short summary: counts added by status + top apply links.",
+    "message": "BROWSER: Use ONLY the OpenClaw-managed browser profile named 'openclaw' (not 'chrome'/Browser Relay). Preflight: call browser.status or browser.snapshot using profile=openclaw; if unreachable, stop immediately and report that the openclaw browser control service is not available.
+
+Daily Job Triage Run: Check for new listings matching queries in `/home/gary/.openclaw/workspace/streams/indeed/QUERIES.md` (last 24 hours). Use the openclaw browser profile to visit each query URL, open each job page (viewjob?jk=...), de-dupe by jk against `/home/gary/.openclaw/workspace/data/tracker.csv`, read the job description, write a short JD-based summary into the tracker notes, and set status apply/new/maybe/skip (manager roles=maybe; Salesforce-only=skip; DevOps-heavy=skip; unrelated=skip). Append new rows and commit+push changes to opsclawd/job-seeker (use branch+PR, squash-merge, delete branch). Send Gary a short summary: counts added by status + top apply links.",
     "model": "openai-codex/gpt-5.1-codex-mini",
     "thinking": "off"
   },
