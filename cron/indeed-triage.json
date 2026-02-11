@@ -16,5 +16,5 @@
     "postToMainMode": "summary"
   },
   "sessionTarget": "isolated",
-  "enabled": true
+  "enabled": false
 }
